@@ -22,7 +22,14 @@ public class GeminiService {
             Given the following text, identify:
             1. "emotion": the dominant emotion (examples: happy, sad, anxious, angry, excited, frustrated, lonely).
             2. "intensity_level": a number from 1 to 5.
-            3. "alert": "yes" if the text contains self-harm, suicidal thoughts, abuse, or dangerous behavior; otherwise "no".
+            3. "alert": "yes" if the text contains self-harm, suicidal thoughts, abuse, Child and Youth Protection or Life Emergency ; otherwise "no".
+            4. "alert_type": the type of alert detected. It must be one of the following:
+                - "self-harm"
+                - "suicidal"
+                - "abuse"
+                - "child_protection"
+                - "emergency"
+                - "none" (if there is no alert)
 
             RULES:
             - Respond ONLY with valid JSON.
@@ -37,6 +44,7 @@ public class GeminiService {
             "emotion": "sad",
             "intensity_level": 4,
             "alert": "no"
+            "alert_type": "none"
             }
 
             Now analyze this text:
