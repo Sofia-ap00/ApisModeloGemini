@@ -7,10 +7,10 @@ import org.springframework.stereotype.Service;
 @Service
 public class GeminiService {
 
-    private final ChatModel chemodel;
+    private final ChatModel chatmodel;
 
-    public GeminiService(ChatModel chemodel) {
-        this.chemodel = chemodel;
+    public GeminiService(ChatModel chatmodel) {
+        this.chatmodel = chatmodel;
     }
 
     public String analizarTexto(String texto){
@@ -48,7 +48,7 @@ public class GeminiService {
 
         System.out.println(texto);
 
-        return chemodel.call(promptFinal).getResult().getOutput().getText();
+        return chatmodel.call(promptFinal).getResult().getOutput().getText();
     
     }
 
