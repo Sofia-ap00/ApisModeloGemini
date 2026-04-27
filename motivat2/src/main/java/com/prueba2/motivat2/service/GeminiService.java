@@ -26,7 +26,7 @@ public class GeminiService {
             4. "alert_type": the type of alert detected. It must be one of the following:
                 - "self-harm"
                 - "suicidal"
-                - "abuse"
+                - "abuse" (Under 'alert_type', use 'abuse' for any situation involving domestic violence, gender-based violence, or psychological control.)
                 - "child_protection"
                 - "emergency"
                 - "none" (if there is no alert)
