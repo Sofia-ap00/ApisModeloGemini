@@ -29,6 +29,8 @@ public class ChatBotService {
 
                 Your goal is to make the user feel heard, understood, and emotionally supported during the conversation.
 
+                Answer in spanish.
+
                 """.formatted(texto);
 
         Prompt promptFinal = new Prompt(prompt);
