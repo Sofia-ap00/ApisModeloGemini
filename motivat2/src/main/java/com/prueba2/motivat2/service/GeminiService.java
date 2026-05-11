@@ -56,6 +56,7 @@ public class GeminiService {
 
         System.out.println(texto);
 
+        System.out.println(chatmodel.call(promptFinal).getResult().getOutput().getText());
         return chatmodel.call(promptFinal).getResult().getOutput().getText();
     
     }

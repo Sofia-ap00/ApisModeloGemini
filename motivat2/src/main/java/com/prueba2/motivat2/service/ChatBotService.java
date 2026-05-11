@@ -31,10 +31,16 @@ public class ChatBotService {
 
                 Answer in spanish.
 
+                Now analyze this text:
+                %s
                 """.formatted(texto);
 
         Prompt promptFinal = new Prompt(prompt);
 
+
+        System.out.println(texto);
+
+        System.out.println(chatModel.call(promptFinal).getResult().getOutput().getText());
         return chatModel.call(promptFinal).getResult().getOutput().getText();
     }
 
