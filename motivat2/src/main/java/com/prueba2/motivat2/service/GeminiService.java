@@ -4,17 +4,28 @@ import org.springframework.ai.chat.model.ChatModel;
 import org.springframework.ai.chat.prompt.Prompt;
 import org.springframework.stereotype.Service;
 
+/**
+ * @author Sofia Aguilar 
+ * Clase de servicio encargado de analizar notas diarias medianta la IA.
+ */
 @Service
 public class GeminiService {
 
+    //Modelo de IA para generar las respuestas
     private final ChatModel chatmodel;
 
     public GeminiService(ChatModel chatmodel) {
         this.chatmodel = chatmodel;
     }
 
+    /**
+     * Metodo que analiza el texto de una nota diaria y devuelve un json. 
+     * @param texto Contenido de la nota diaria
+     * @return Devuelve el json con la informacion del analisis
+     */
     public String analizarTexto(String texto){
         
+        //Texto de las instrucciones a mandar a la IA para el analisis
         String prompt = """
             You are an assistant that analyzes diary entries and returns ONLY a JSON object.
 
@@ -52,13 +63,12 @@ public class GeminiService {
             """.formatted(texto);
 
     
-        Prompt promptFinal= new Prompt(prompt);
+        Prompt promptFinal= new Prompt(prompt); //Construccion del prompt
 
         System.out.println(texto);
-
         System.out.println(chatmodel.call(promptFinal).getResult().getOutput().getText());
-        return chatmodel.call(promptFinal).getResult().getOutput().getText();
-    
+        
+        return chatmodel.call(promptFinal).getResult().getOutput().getText(); //json a devolver
     }
 
 }
