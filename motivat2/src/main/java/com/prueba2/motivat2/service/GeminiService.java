@@ -41,6 +41,7 @@ public class GeminiService {
                 - "child_protection"
                 - "emergency"
                 - "none" (if there is no alert)
+            5. "summary": very brief summary of the emotional content
 
             RULES:
             - Respond ONLY with valid JSON.
@@ -56,6 +57,7 @@ public class GeminiService {
             "intensity_level": 4,
             "alert": "no"
             "alert_type": "none"
+            "summary" : The user feels very sad after having an argument with their partner.
             }
 
             Now analyze this text:
