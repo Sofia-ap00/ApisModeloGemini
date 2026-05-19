@@ -1,5 +1,7 @@
 package com.prueba2.motivat2.service;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.ai.chat.model.ChatModel;
 import org.springframework.ai.chat.prompt.Prompt;
 import org.springframework.stereotype.Service;
@@ -10,6 +12,8 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class ChatBotService {
+
+    private static final Logger LOG = LoggerFactory.getLogger(ChatBotService.class);
 
     //Modelo de IA para generar las respuestas
     private final ChatModel chatModel;
@@ -49,9 +53,8 @@ public class ChatBotService {
 
         Prompt promptFinal = new Prompt(prompt); //Construccion del prompt
 
-
-        System.out.println(texto);
-        System.out.println(chatModel.call(promptFinal).getResult().getOutput().getText());
+        LOG.info(texto);
+        LOG.info(chatModel.call(promptFinal).getResult().getOutput().getText());
         
         return chatModel.call(promptFinal).getResult().getOutput().getText(); //Devuelve la respuesta generada por la IA
     }

@@ -2,23 +2,28 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
+	
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>3.5.13</version>
 		<relativePath/> 
 	</parent>
+
 	<groupId>com.prueba2</groupId>
 	<artifactId>motivat2</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name/>
-	<description/>
-	<url/>
-	<licenses>
-		<license/>
-	</licenses>
+	<name>APIS_MODELO_GEMINI</name>
+	
 	<developers>
-		<developer/>
+		<developer>
+            <id>Sofia-ap00</id>
+            <name>Sofia Aguilar</name>
+            <email>sofia.aguilarp00@gmail.com</email>
+            <roles>
+                <role>Desarrolladora principal</role>
+            </roles>
+        </developer>
 	</developers>
 
 	<properties>
@@ -78,6 +83,7 @@
 					</annotationProcessorPaths>
 				</configuration>
 			</plugin>
+			
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
