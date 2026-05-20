@@ -14,7 +14,7 @@ La API está preparada para ser consumida por aplicaciones externas, como el pro
 - Java 21
 - Spring Boot 3 
 - Maven
-- Gemini API
+- Google Gemini
 
 ---
 
@@ -66,8 +66,7 @@ A continuación se describen todas las capas del proyecto, basadas en la estruct
 - Recibir peticiones del cliente y validarlas.
 - Gestionar respuestas HTTP.
 - Delegar la lógica a la capa Service.
-- No debe contener lógica de negocio.
-- No debe acceder directamente a la API de Gemini.
+- **No debe:** contener lógica de negocio o acceder directamente a la API de Gemini.
 
 ---
 
@@ -81,8 +80,7 @@ A continuación se describen todas las capas del proyecto, basadas en la estruct
 - Gestionar la comunicación con la API de Gemini.
 - Procesar datos antes de devolverlos al controlador.
 - Manejar errores y excepciones internas.
-- No debe exponer endpoints.
-- No debe realizar validaciones propias del controlador.
+- **No debe:** exponer endpoints o realizar validaciones propias del controlador.
 
 ---
 
